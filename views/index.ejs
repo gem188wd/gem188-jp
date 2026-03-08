@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- SEO Meta Tags 2026 -->
+     <title>Gem188 | Toko Gadget Premium & Ekosistem Teknologi Terpercaya</title>
+     <meta name="description"
+          content="Dapatkan gadget premium mulai dari headset studio, keyboard mekanikal, hingga monitor 240Hz di Gem188. Bergaransi resmi dengan pengiriman instan seluruh Indonesia.">
+     <meta name="keywords"
+          content="Gem188, gadget premium, headset gaming, keyboard mekanik, kamera full frame, monitor gaming">
+     <meta name="author" content="Tim Ahli Teknologi Gem188">
+     <link rel="canonical" href="https://gem188.com/">
+
+     <!-- Open Graph / Social Media -->
+     <meta property="og:type" content="website">
+     <meta property="og:title" content="Gem188 | Masa Depan Teknologi di Genggaman Anda">
+     <meta property="og:description"
+          content="Pusat belanja elektronik premium dengan kurasi produk terbaik untuk profesional dan gamer.">
+     <meta property="og:image"
+          content="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=630">
+
+     <!-- Preload LCP Image to improve performance (< 2.5s) -->
+     <link rel="preload" as="image"
+          href="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80">
+
+     <!-- Structured Data (JSON-LD) - Secret Language for Google -->
+     <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "Gem188 Official Store",
+      "description": "Toko gadget premium terpercaya di Indonesia.",
+      "url": "https://gem188.com",
+      "telephone": "+628123456789",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Teknologi Masa Depan No. 188",
+        "addressLocality": "Jakarta",
+        "postalCode": "12345",
+        "addressCountry": "ID"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    }
+    </script>
+
+     <script src="https://cdn.tailwindcss.com"></script>
+     <script src="https://unpkg.com/lucide@latest"></script>
+     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+          rel="stylesheet">
+
+     <style>
+          body {
+               font-family: 'Plus Jakarta Sans', sans-serif;
+               overflow-x: hidden;
+          }
+
+          .glass {
+               background: rgba(255, 255, 255, 0.85);
+               backdrop-filter: blur(20px);
+               -webkit-backdrop-filter: blur(20px);
+          }
+
+          .gradient-text {
+               background: linear-gradient(90deg, #2563eb, #9333ea);
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+          }
+
+          .active-link {
+               color: #2563eb;
+               position: relative;
+               font-weight: 800;
+          }
+
+          .active-link::after {
+               content: '';
+               position: absolute;
+               bottom: -4px;
+               left: 0;
+               width: 100%;
+               height: 2px;
+               background: #2563eb;
+               border-radius: 2px;
+          }
+
+          /* Anti-CLS: Set aspect ratio for images */
+          .img-container {
+               aspect-ratio: 4/3;
+               background-color: #f1f5f9;
+          }
+     </style>
+</head>
+
+<body class="bg-[#f8fafc] text-slate-900">
+
+     <!-- HEADER: Navigasi dan Logo -->
+     <header class="glass sticky top-0 z-[100] border-b border-slate-200/50">
+          <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center" aria-label="Main Navigation">
+               <div class="flex items-center gap-2">
+                    <div
+                         class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-300">
+                         <i data-lucide="gem" aria-hidden="true"></i>
+                    </div>
+                    <a href="/" class="text-2xl font-extrabold tracking-tighter"
+                         title="Kembali ke Beranda Gem188">GEM<span class="text-blue-600">188</span></a>
+               </div>
+
+               <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                    <div class="relative group cursor-pointer">
+                         <button class="hover:text-blue-600 transition flex items-center gap-1 focus:outline-none"
+                              aria-haspopup="true">
+                              Kategori <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                         </button>
+                         <div
+                              class="absolute top-full left-0 mt-2 w-48 bg-white rounded-2xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all p-2 duration-300">
+                              <a href="/?category=Headset"
+                                   class="block px-4 py-2 hover:bg-blue-50 rounded-xl transition">Headset</a>
+                              <a href="/?category=Keyboard"
+                                   class="block px-4 py-2 hover:bg-blue-50 rounded-xl transition">Keyboard</a>
+                              <a href="/?category=Kamera"
+                                   class="block px-4 py-2 hover:bg-blue-50 rounded-xl transition">Kamera</a>
+                              <a href="/?category=Gaming"
+                                   class="block px-4 py-2 hover:bg-blue-50 rounded-xl transition">Gaming</a>
+                         </div>
+                    </div>
+                    <a href="/?filter=promo"
+                         class="hover:text-blue-600 transition <%= activeFilter === 'promo' ? 'active-link' : '' %>">Promo</a>
+                    <a href="/?filter=terbaru"
+                         class="hover:text-blue-600 transition <%= activeFilter === 'terbaru' ? 'active-link' : '' %>">Terbaru</a>
+               </div>
+
+               <div class="flex items-center gap-4">
+                    <a href="https://gem188-memory.com/" target="_blank" rel="noopener noreferrer"
+                         class="text-slate-700 font-bold hover:text-blue-600 transition px-4 py-2 text-sm">Masuk</a>
+                    <a href="https://gem188-memory.com/account/register" target="_blank" rel="noopener noreferrer"
+                         class="bg-blue-600 text-white px-6 py-2.5 rounded-2xl font-bold hover:bg-blue-700 transition shadow-xl shadow-blue-200 flex items-center gap-2 text-sm">
+                         <i data-lucide="user-plus" class="w-4 h-4" aria-hidden="true"></i> Daftar
+                    </a>
+               </div>
+          </nav>
+     </header>
+
+     <!-- MAIN: Isi Utama Landing Page -->
+     <main id="content">
+
+          <!-- SECTION: Hero / Janji Utama -->
+          <section class="relative py-20 overflow-hidden bg-white" aria-labelledby="hero-title">
+               <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                         <!-- H1: Hanya boleh ada satu. Berisi janji utama -->
+                         <h1 id="hero-title"
+                              class="text-5xl md:text-6xl font-extrabold text-slate-900 leading-[1.1] mb-6">
+                              Investasi Teknologi <br><span class="gradient-text">Gadget Premium</span> di Gem188.
+                         </h1>
+                         <p class="text-slate-500 text-lg mb-8 max-w-md">
+                              Meningkatkan produktivitas dan pengalaman hiburan Anda dengan kurasi produk elektronik
+                              terbaik berstandar internasional.
+                         </p>
+                         <div class="flex flex-wrap gap-4">
+                              <a href="#shop"
+                                   class="bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold shadow-xl flex items-center gap-2 hover:bg-slate-800 transition">
+                                   <i data-lucide="shopping-bag" class="w-5 h-5"></i> Belanja Sekarang
+                              </a>
+                              <a href="https://wa.me/628123456789"
+                                   class="bg-white border border-slate-200 text-slate-700 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition flex items-center gap-2">
+                                   Hubungi Ahli Kami
+                              </a>
+                         </div>
+                    </div>
+                    <!-- Anti-CLS: Container dengan bg placeholder -->
+                    <div class="relative hidden md:block img-container rounded-[40px] shadow-2xl rotate-2">
+                         <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+                              alt="Meja kerja profesional dengan gadget premium dari Gem188" width="800" height="600"
+                              class="rounded-[40px] object-cover w-full h-full">
+                    </div>
+               </div>
+          </section>
+
+          <!-- SECTION: Katalog Produk -->
+          <section id="shop" class="max-w-7xl mx-auto px-6 py-12" aria-labelledby="catalog-title">
+               <!-- H2: Fitur Utama atau Kategori Utama -->
+               <div
+                    class="mb-10 flex flex-col md:flex-row md:items-center justify-between border-b border-slate-100 pb-6 gap-4">
+                    <h2 id="catalog-title" class="text-3xl font-extrabold text-slate-900">
+                         Katalog Unggulan: <span class="text-blue-600 capitalize">
+                              <%= activeFilter %>
+                         </span>
+                    </h2>
+                    <% if(activeFilter !=='semua' ) { %>
+                         <a href="/"
+                              class="text-sm font-bold text-slate-400 hover:text-red-500 flex items-center gap-1 transition">
+                              <i data-lucide="refresh-ccw" class="w-4 h-4"></i> Reset Pencarian
+                         </a>
+                         <% } %>
+               </div>
+
+               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <% if(products.length> 0) { %>
+                         <% products.forEach(p=> { %>
+                              <!-- ARTICLE: Item Produk Independen -->
+                              <article
+                                   class="group relative bg-white rounded-[32px] p-3 border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500">
+                                   <div class="relative h-72 rounded-[24px] overflow-hidden mb-6 bg-slate-100">
+                                        <div class="absolute top-4 left-4 z-10 flex gap-2">
+                                             <% if(p.isPromo) { %>
+                                                  <span
+                                                       class="bg-red-500 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg italic animate-pulse">Penawaran
+                                                       Terbatas</span>
+                                                  <% } %>
+                                                       <% if(p.isNew) { %>
+                                                            <span
+                                                                 class="bg-green-500 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">Koleksi
+                                                                 2026</span>
+                                                            <% } %>
+                                        </div>
+                                        <img src="<%= p.img %>"
+                                             alt="<%= p.name %> - <%= p.category %> Berkualitas Tinggi" loading="lazy"
+                                             width="400" height="300"
+                                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                   </div>
+                                   <div class="px-3 pb-4">
+                                        <!-- H3: Penjelasan Detail Produk -->
+                                        <span class="text-[10px] font-bold text-blue-500 uppercase tracking-widest">
+                                             <%= p.category %>
+                                        </span>
+                                        <h3
+                                             class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition mt-1">
+                                             <%= p.name %>
+                                        </h3>
+                                        <p class="text-slate-400 text-sm mt-1 line-clamp-2">
+                                             <%= p.desc %>
+                                        </p>
+                                        <div class="flex items-center justify-between mt-6">
+                                             <div class="flex flex-col">
+                                                  <span class="text-2xl font-black text-slate-900">
+                                                       <%= p.price %>
+                                                  </span>
+                                                  <span class="text-[10px] text-green-600 font-bold">Stok
+                                                       Tersedia</span>
+                                             </div>
+                                             <a href="/product/<%= p.id %>"
+                                                  class="bg-slate-900 text-white p-4 rounded-2xl hover:bg-blue-600 transition shadow-lg"
+                                                  aria-label="Lihat detail <%= p.name %>">
+                                                  <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                                             </a>
+                                        </div>
+                                   </div>
+                              </article>
+                              <% }) %>
+                                   <% } else { %>
+                                        <div
+                                             class="col-span-full py-24 text-center bg-white rounded-[40px] border border-dashed border-slate-200">
+                                             <i data-lucide="search-x" class="w-16 h-16 text-slate-200 mx-auto mb-4"
+                                                  aria-hidden="true"></i>
+                                             <h3 class="text-xl font-bold text-slate-900">Produk Tidak Ditemukan</h3>
+                                             <p class="text-slate-400 mt-2">Maaf, saat ini kriteria filter Anda belum
+                                                  tersedia di stok kami.</p>
+                                        </div>
+                                        <% } %>
+               </div>
+          </section>
+
+          <!-- SECTION: Bukti E-E-A-T (Testimoni & Otoritas) -->
+          <section class="bg-slate-900 py-24 text-white" aria-labelledby="trust-title">
+               <div class="max-w-7xl mx-auto px-6">
+                    <h2 id="trust-title" class="text-center text-3xl md:text-4xl font-black mb-16">Mengapa Memilih
+                         Gem188?</h2>
+                    <div class="grid md:grid-cols-3 gap-12">
+                         <!-- Article: Testimoni -->
+                         <article class="space-y-4">
+                              <div class="flex text-yellow-400"><i data-lucide="star"></i><i data-lucide="star"></i><i
+                                        data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                              </div>
+                              <p class="text-slate-400 italic">"Pengiriman super cepat dan barang benar-benar original.
+                                   Gem188 adalah langganan saya untuk setup kantor."</p>
+                              <!-- Bukti Nyata: Nama & Title -->
+                              <div class="flex items-center gap-3">
+                                   <div
+                                        class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold">
+                                        AN</div>
+                                   <div>
+                                        <h4 class="font-bold text-sm text-white">Aditya Nugraha</h4>
+                                        <p class="text-[10px] text-slate-500 uppercase">Tech Lead @ JakartaDigital</p>
+                                   </div>
+                              </div>
+                         </article>
+                         <!-- Detail Teknis / FAQ -->
+                         <article class="space-y-4">
+                              <h4 class="text-xl font-bold flex items-center gap-2"><i data-lucide="shield-check"
+                                        class="text-blue-500"></i> Garansi Resmi 200%</h4>
+                              <p class="text-slate-400 text-sm">Setiap produk yang Anda beli di Gem188 mendapatkan
+                                   perlindungan garansi resmi dan tambahan asuransi pengiriman tanpa biaya tambahan.</p>
+                         </article>
+                         <article class="space-y-4">
+                              <h4 class="text-xl font-bold flex items-center gap-2"><i data-lucide="truck"
+                                        class="text-blue-500"></i> Pengiriman Robotik</h4>
+                              <p class="text-slate-400 text-sm">Kami menggunakan sistem manajemen gudang berbasis AI
+                                   untuk memastikan paket Anda dikemas dalam 15 menit setelah pembayaran.</p>
+                         </article>
+                    </div>
+               </div>
+          </section>
+     </main>
+
+     <!-- FOOTER: Informasi Hak Cipta dan Link Kebijakan -->
+     <footer class="bg-white border-t border-slate-100 py-16">
+          <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+               <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                         <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white">
+                              <i data-lucide="gem" class="w-5 h-5"></i>
+                         </div>
+                         <span class="text-xl font-black tracking-tighter">GEM188</span>
+                    </div>
+                    <p class="text-slate-400 text-sm max-w-sm">Gem188 adalah platform e-commerce premium yang berfokus
+                         pada penyediaan solusi teknologi terbaik untuk masyarakat modern di Indonesia.</p>
+               </div>
+               <div>
+                    <h4 class="font-bold text-slate-900 mb-6 uppercase text-xs tracking-widest">Layanan</h4>
+                    <ul class="space-y-4 text-sm text-slate-500">
+                         <li><a href="/?filter=promo" class="hover:text-blue-600">Promo Hari Ini</a></li>
+                         <li><a href="/" class="hover:text-blue-600">Lacak Pengiriman</a></li>
+                         <li><a href="/" class="hover:text-blue-600">Pusat Bantuan</a></li>
+                    </ul>
+               </div>
+               <div>
+                    <h4 class="font-bold text-slate-900 mb-6 uppercase text-xs tracking-widest">Perusahaan</h4>
+                    <ul class="space-y-4 text-sm text-slate-500">
+                         <li><a href="/" class="hover:text-blue-600">Tentang Kami</a></li>
+                         <li><a href="/" class="hover:text-blue-600">Kebijakan Privasi</a></li>
+                         <li><a href="/" class="hover:text-blue-600">Syarat & Ketentuan</a></li>
+                    </ul>
+               </div>
+          </div>
+          <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-slate-50 text-center">
+               <p class="text-slate-400 text-xs font-semibold">&copy; 2026 Gem188 Official Store. Seluruh hak cipta
+                    dilindungi undang-undang. Versi 2.0.4</p>
+          </div>
+     </footer>
+
+     <script>
+          // Inisialisasi ikon Lucide
+          lucide.createIcons();
+
+          // Optimasi INP: Pastikan interaksi klik responsif
+          document.addEventListener('click', (e) => {
+               const target = e.target.closest('a, button');
+               if (target) {
+                    // Berikan feedback visual instan jika perlu (CSS transition sudah menangani ini)
+               }
+          }, { passive: true });
+     </script>
+</body>
+
+</html>
